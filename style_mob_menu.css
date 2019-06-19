@@ -1,0 +1,356 @@
+*{
+  margin:0;
+  padding:0;
+  text-decoration:none
+}
+
+/* CUSTOM ODO MNA */
+
+.underneath {margin-left: 35px;}
+
+.underneath2 {margin-left: 70px;}
+
+
+html{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body {
+    
+    font-family: quicksand;
+}
+nav {
+    position: relative;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+#flexmenu{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: none;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+}
+
+
+#main-menu{
+  -ms-flex-item-align: end;
+      align-self: flex-end; 
+}
+/* keep the drop-downs from being hidden by content wrappers etc */
+.sub-menu {
+  z-index: 1234;
+}
+
+/* General Menu Styling */
+#flexmenu li,
+#flexmenu li a{
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+   
+    -webkit-transition:all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+/* MAIN BUTTONS */
+
+#flexmenu ul li a {
+    padding: 17px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+#flexmenu ul li.has-sub > a {
+    padding-right: 30px;
+}
+/* Drop icon */
+#flexmenu ul li.has-sub > a:after {
+    position: absolute;
+    top: 22px;
+    right: 11px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: white;
+    content: '';
+}
+#flexmenu ul ul li.has-sub > a:after {
+    position: absolute;
+    top: 16px;
+    right: 11px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #FFF;
+    content: '';
+}
+#flexmenu > ul > li.has-sub > a:before {
+    position: absolute;
+    top: 19px;
+    right: 14px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #ddd;
+    -webkit-transition:all .25s ease;
+    transition: all .25s ease;
+}
+#flexmenu > ul > li.has-sub:hover > a:before {
+    top: 23px;
+    height: 0;
+}
+#flexmenu ul ul li.has-sub > a:before {
+    position: absolute;
+    top: 13px;
+    right: 14px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #FFF;
+    content: '';
+    -webkit-transition:all .3s ease;
+    transition: all .3s ease;
+}
+#flexmenu ul ul > li.has-sub:hover > a:before {
+    top: 17px;
+    height: 0;
+}
+#flexmenu ul ul li.has-sub:hover,
+#flexmenu ul li.has-sub ul li.has-sub ul li:open {
+    
+}
+/* Submenu default states, removed by hover gives the animation */
+#flexmenu ul ul {
+    position: absolute;
+    left: -9999px;
+}
+
+
+#flexmenu li:hover > ul {
+    left: auto;
+}
+#flexmenu ul ul li {
+    height: 0;
+    background-color: #c7c8ca;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease
+}
+#flexmenu li:hover > ul > li {
+    height: 35px;
+}
+/* tertiary menu */
+#flexmenu ul ul ul {
+    margin-left: 100%;
+    top: 0;
+}
+
+/* SUB BUTTONS */
+
+#flexmenu ul ul li a {
+    padding: 11px 15px;
+    width: 170px;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.linka-mob {display: none;}
+.logicko-mob {display: none;}
+
+
+@media screen and (max-width: 768px) {
+	#flexmenu{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+}
+	
+  /* Center the logo and remove the bar */
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 46px;
+        text-align: center;
+        padding: 10px 0 0 0;
+    }
+  
+  /* Hamburger */
+    .button {
+    
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 10000;
+    }
+    
+    /* TU MENIM FARBU MENU IKONKY HORE V ROHU */
+    .button:after {
+        position: absolute;
+        top: 16px; /* 2 ciarka */
+        right: 20px;
+        display: block;
+        height: 19px; /* 3 ciarka */
+        width: 32px;
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+        content: '';
+    }
+    .button:before {
+        -webkit-transition:all .3s ease;
+        transition: all .3s ease;
+        position: absolute;
+        top: 28px; /* ciarka */
+        right: 20px;
+        display: block;
+        height: 5px;
+        width: 32px;
+        background: black;
+        content: '';
+    }
+    
+    
+    
+  /* Turn it into an X when open */
+    .button.menu-opened{
+      background: black;
+    }
+    .button.menu-opened:after {
+        -webkit-transition:all .3s ease;
+        transition: all .3s ease;    
+        top: 23px;
+        border: 0;
+        height: 5px;
+        width: 32px;
+        background: black;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+    .button.menu-opened:before {
+        top: 23px;
+        background: black;
+        width: 32px;
+        height: 5px;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+    }
+  /* reset horizontal styles */
+    #flexmenu ul {
+        display: none;
+    }
+    #flexmenu ul li,
+    #flexmenu ul li a,
+    #flexmenu ul ul li a{
+        width: 100%;
+    }
+
+    #flexmenu ul ul li,
+    #flexmenu li:hover > ul > li {
+        height: auto;  
+    }
+    #flexmenu ul ul li a {
+        padding-left: 25px;
+    }
+    #flexmenu ul ul ul li a {
+        padding-left: 35px;
+    }
+
+    #flexmenu ul ul,
+    #flexmenu ul ul ul {
+        position: relative;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+    #flexmenu ul ul ul li.active a {
+        border-left: none;
+    }
+    #flexmenu > ul > li.has-sub > ul > li.focus > a,
+    #flexmenu > ul ul > li.has-sub > ul > li.focus > a {
+        background: #262626;
+        -webkit-transition:all .3s ease;
+        transition: all .3s ease;
+    }
+  /* remove cross when menu item is toggled */
+    #flexmenu > ul > li.has-sub > a:after,
+    #flexmenu > ul > li.has-sub > a:before,
+    #flexmenu ul ul > li.has-sub > a:after,
+    #flexmenu ul ul > li.has-sub > a:before {
+        display: none;
+    }
+
+  /* submenu toggles */
+    #flexmenu .submenu-button {
+        position: absolute;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        display: block;
+        border-left: 1px solid #444;
+        height: 46px;
+        width: 46px;
+        cursor: pointer;
+    }
+    #flexmenu ul ul .submenu-button {
+        height: 34px;
+        width: 34px;
+    }
+    
+    /* TU MENIM FARBU KRIZIKU VO VNUTRI PART 1 */ 
+    #flexmenu .submenu-button:after {
+        position: absolute;
+        top: 22px;
+        right: 19px;
+        width: 8px;
+        height: 2px;
+        display: block;
+        background: black;
+        content: '';
+    }
+    #flexmenu ul ul .submenu-button:after {
+        top: 15px;
+        right: 13px;
+    }
+    #flexmenu .submenu-button.submenu-opened:after {
+        background: black;
+    }
+    
+    /* TU MENIM FARBU KRIZIKU VO VNUTRI PART 2 */
+    #flexmenu .submenu-button:before {
+        position: absolute;
+        top: 19px;
+        right: 22px;
+        display: block;
+        width: 2px;
+        height: 8px;
+        background: black;
+        content: ''
+    }
+    #flexmenu ul ul .submenu-button:before {
+        top: 12px;
+        right: 16px;
+    }
+    #flexmenu .submenu-button.submenu-opened:before {
+        display: none;
+    }   
+  
+    .linka-mob {width: 100%;
+    display: block;}
+    .logicko-mob {width: 115px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;}
+}

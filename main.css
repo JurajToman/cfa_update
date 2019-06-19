@@ -1,0 +1,2213 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* COLOR PALLETE
+BLUE - #547dbd
+GREEN - #66b330
+RED - #e32626
+ORANGE - #f2994d
+YELLOW - #e2e449
+LIGHT GREY - #c7c8ca
+DARK GREY - #939598
+*/
+
+/* CODE */
+
+/* CELY FONT FACE ROBI TO ZE KED NIEKTO NEMA NAINSTALOVANY NAS FONT (PISMO KTORE POUZIVAME) TAK MU HO AUTOMATICKY STIAHNE / NAINSTALUJE DO PC A VIDI PISMENA / TEXT TAK AKO MA */ 
+
+/* TENKE PISMO */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/quicksand-v9-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Quicksand Light'), local('Quicksand-Light'),
+       url('/fonts/quicksand-v9-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/quicksand-v9-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/quicksand-v9-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/quicksand-v9-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/quicksand-v9-latin-300.svg#Quicksand') format('svg'); /* Legacy iOS */
+}
+
+/* quicksand-500 - latin */ /* JEMNE HRUBE PISMO */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/quicksand-v9-latin-500.eot'); /* IE9 Compat Modes */
+  src: local('Quicksand Medium'), local('Quicksand-Medium'),
+       url('/fonts/quicksand-v9-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/quicksand-v9-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+	  
+       url('/fonts/quicksand-v9-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/quicksand-v9-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/quicksand-v9-latin-500.svg#Quicksand') format('svg'); /* Legacy iOS */
+}
+
+/* quicksand-regular - latin */ /* KLASICKE PISMO - ZAKLADNA HRUBKA */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/quicksand-v9-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Quicksand Regular'), local('Quicksand-Regular'),
+       url('/fonts/quicksand-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/quicksand-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/quicksand-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/quicksand-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/quicksand-v9-latin-regular.svg#Quicksand') format('svg'); /* Legacy iOS */
+}
+
+/* quicksand-700 - latin */ /* HRUBE PISMO */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/quicksand-v9-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Quicksand Bold'), local('Quicksand-Bold'),
+       url('/fonts/quicksand-v9-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/quicksand-v9-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/quicksand-v9-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/quicksand-v9-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/quicksand-v9-latin-700.svg#Quicksand') format('svg'); /* Legacy iOS */
+}
+
+
+
+
+
+* {box-sizing: border-box;
+}
+
+
+html{height: 100%;
+margin: auto !important;
+overflow: auto!important;
+font-family: quicksand;}
+
+#endatstu-aside, #graphic-aside, #ikea-aside, #protected-aside, #holidays-aside, #practical-aside, #intership-aside, #scolarship-aside, #subjects-aside {display: none;}
+
+/* body je cela webstranka, od hora az dole, na webstranke sa pouziva font quicksand, a obrazok guliciek ako mozte vidiet napravo (iba na HOMEPAGE SU GULICKY) */
+body {
+    font-family: quicksand !important;
+    background-repeat: no-repeat;
+    background-position: 0% 81%;
+}
+
+/* a ma predefinovane hodnoty ktorych som sa zbavil aby som ich mohol neskor prisposobovat podla seba (vyfarbit, zmenit farbu pisma...upravovat proste) */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* button ma predefinovane hodnoty ktorych som sa zbavil aby som ich mohol neskor prisposobovat podla seba (vyfarbit, zmenit farbu pisma...upravovat proste) */
+
+button {border: none;
+background: transparent;}
+
+/* ul ma predefinovane hodnoty ktorych som sa zbavil aby som ich mohol neskor prisposobovat podla seba (vyfarbit, zmenit farbu pisma...upravovat proste) */
+
+ul {margin-top: 0;}
+
+/* footer ma predefinovane hodnoty ktorych som sa zbavil aby som ich mohol neskor prisposobovat podla seba (vyfarbit, zmenit farbu pisma...upravovat proste) */
+
+footer {position:relative!important;
+   bottom:0;
+   width:100%;
+   }
+
+.footer li a:hover {font-weight: 700 !important;}
+
+/* blizsia specifikacia buttonu - konkretne tieto buttony - vztahuje sa na buttony na lavej strane */
+
+button.tablinks.dropdown-btn {display: block;
+font-family: quicksand;}
+
+a.vtom {display: block;}
+
+/* APPLY NOW DOTS BG */ /* GULICKY POZADIE */
+
+.applynow-dots1 {
+    background-image: url("gulickz-right.png") !important;
+    background-repeat: no-repeat;
+    background-position: 96% 70%;
+    background-size: 190px auto;
+    background-clip: border-box;
+    background-attachment: scroll;
+}
+
+
+.bodkybackground {
+    background-image: url(gulickz.png);
+    background-repeat: no-repeat;
+    background-position: 4% 69%;
+    background-size: 190px auto;
+}
+
+/* GRID LAYOUT  - SIRKA, VYSKA, KOLKO POLICIEK TO BUDE MAT (CHAP TO AKO TABULKU DO KTOREJ DOSADZAS VECI (ELEMENTY) */
+
+.grid {
+    width: auto;
+    max-width: 1170px;
+    min-width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    grid-auto-flow: row;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    -webkit-box-shadow: 1px 12px 5px 2px;
+    box-shadow: 1px 12px 5px 2px;
+    position: relative;
+    margin-top: -54px;
+    background: white;
+}
+
+
+/* TOP BAR - HORNA LISTA KDE SU BUTTONY AKO ABOUT US, CONTACT, ....*/
+
+
+/* KONKRETNY BUTTON APPLY NOW - VIDIS JE ORANZOVY */
+.apply {
+    
+  padding: 10px;
+   /* border: 3px solid #f2994d; /*
+   /* som doplnil */
+  /*  display: block; */
+    color:white !important;
+    width: 22px;
+    height: 22px;
+    border-radius: 0%;
+    background: #f2994d;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+    animation: pulse 2s infinite;
+}
+
+
+
+.apply:hover {letter-spacing: 0.5px;
+background: #f2994d;}
+
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255, 128, 10, 0.589);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(255, 128, 10, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(255, 128, 10, 0);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(255, 128, 10, 0.589);
+      box-shadow: 0 0 0 0 rgba(255, 128, 10, 0.589);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(255, 128, 10, 0);
+        box-shadow: 0 0 0 10px rgba(255, 128, 10, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 128, 10, 0));
+        box-shadow: 0 0 0 0 rgba(255, 128, 10, 0);
+    }
+  }
+
+
+.apply-inside-article {
+	font-family: quicksand;
+	font-weight: 550;
+	font-size: 16px;
+	padding: 10px;
+   /* border: 3px solid #f2994d; /*
+   /* som doplnil */
+  /*  display: block; */
+    color:white !important;
+    background: #f2994d;
+    cursor: pointer;
+	width: 100% !important;
+}
+
+
+
+.toplink:hover {letter-spacing: 0.5px}
+
+/* CELE JE TO JEDNA KOCKA/OBDLZNIK KTORY JE TAKTO A TAKTO DLHY A JE V NOM PISANE TOUTO A TOUTO FARBOU */
+
+.container {
+    width: 1250px;
+    font-weight: 700 !important;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+}
+
+
+/* STYLIZACIA DANEHO RIADKU - CONTAINERA */
+.header_main .topbar .navigation {
+    height: 30px;
+    color: black;
+    margin: 0;
+
+}
+
+.list-inline {
+    padding-left: 0;
+    /* [disabled]margin-left: -5px; */
+
+}
+
+.header_main .topbar .navigation li {
+    position: relative;
+    height: 100%;
+    line-height: 30px;
+    font-size: 13px;
+    font-weight: 600 !important;
+    padding: 0 8px;
+}
+.list-inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.radecek {
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 0px;
+    padding-left: 15px;
+    margin-top: 10px;
+    color: #000000;
+}
+
+
+
+
+.header_main {
+    background: #00457d;
+    width: 100%;
+    height: 30px;
+    
+    top: 0;
+    z-index: 10001;
+}
+
+.topbar {
+    background: #00457d;
+    width: 100%;
+    z-index: 10001;
+    height: 0px;
+    color: black;
+    display: block;
+    margin-top: -30px;
+}
+
+/* FARBA DANYCH LINKOV */
+
+.toplink {
+  margin: 0 10px;
+  color: black;
+}
+
+.toplink_new {
+  margin: 0 10px;
+  color: black;
+}
+
+
+/* MAIN MENU */
+
+.menucko {
+	font-family: quicksand !important;
+    width: 1250px;
+    margin: 70px auto auto;
+    padding-bottom: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.menucko a {color: white !important;}
+
+/* EDUCATION BUTTON - MODRY */
+
+.dropbtn {
+	font-family:quicksand;
+    border: none;
+    background: transparent;
+    color: #547dbd;
+    font-weight: 550 !important;
+    padding-bottom: 20px;
+    display: block;
+    font-size: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* EDUCATION CONTAINER - TO CO SA TI OTVORI KED NA TO PREJDES MYSOU - FARBA, TEXT, MEDZERY... */
+
+.dropdown-content {
+	font-family:quicksand;
+    font-weight: 700 !important;
+    font-size: 16px;
+    color: #000000;
+    display: none;
+    position: absolute;
+    background-color: #547dbd;
+    width: 600px;
+    align-self: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* EDUCATION CONTAINER - TO CO SA TI OTVORI KED NA TO PREJDES MYSOU - TO AKO TO JE ZORADENE - GRID!!! */
+
+.dropdown-container {
+	font-family:quicksand !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 25px;
+    grid-auto-flow: column;
+    width: 100%;
+    height: auto;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: normal;
+    font-weight: 700 !important;
+    left: auto;
+    right: auto;
+    text-align: left;
+
+}
+
+
+/* GREEN SECTION */
+/* Courses CONTAINER - TO CO SA TI OTVORI KED NA TO PREJDES MYSOU - TO AKO TO JE ZORADENE - GRID!!! */
+
+
+.dropdown-container2 {
+	font-family:quicksand;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    font-style: normal;
+    font-weight: 700 !important;
+    text-align: left;
+    width: auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 50px;
+    align-items: flex-start !important;
+}
+
+
+/* Courses BUTTON - ZELENY */
+
+.dropbtn2 {
+	font-family:quicksand;
+   border: none;
+    background: transparent;
+    color: #66b330;
+    font-weight: 550 !important;
+    padding-bottom: 20px;
+    display: block;
+    font-size: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown2:hover .dropbtn2 {
+	font-family:quicksand;
+    color: #66b330;
+    background: transparent;
+}
+
+/* Courses CONTAINER - TO CO SA TI OTVORI KED NA TO PREJDES MYSOU - FARBA, TEXT, MEDZERY... */
+
+.dropdown-content2 {
+	font-family:quicksand;
+    font-weight: 700;
+    font-size: 16px;
+    display: none;
+    position: absolute;
+    background-color: #66b330;
+    width: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-top: 25px;
+    padding-right: 25px;
+    /* [disabled]padding-left: 25px; */
+    padding-bottom: 25px;
+    max-width: 650px;
+}
+
+
+.dropdown2:hover .dropdown-content2 {
+	font-family:quicksand;
+    display: block;
+}
+
+/* RED SECTION */
+/* Diagnostics CONTAINER - TO CO SA TI OTVORI KED NA TO PREJDES MYSOU - TO AKO TO JE ZORADENE - GRID!!! */
+
+
+.dropdown-container3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 50px;
+    grid-auto-flow: column;
+    width: 100%;
+    height: auto;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: normal;
+    font-weight: 700 !important;
+    left: auto;
+    right: auto;
+    text-align: left;
+    align-items: flex-start !important
+}
+
+/* Diagnostics BUTTON - Cerveny */
+
+.dropbtn3 {
+    border: none;
+    background: transparent;
+    color: #e32626;
+    font-weight: 550 !important;
+    padding-bottom: 20px;
+    display: block;
+    font-size: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+	font-family:quicksand;
+}
+
+ .dropdown3:hover .dropbtn3 {
+    color: #e32626 !important;
+    background: transparent;
+}
+
+/* Diagnostics CONTAINER - TO CO SA TI OTVORI KED NA TO PREJDES MYSOU - FARBA, TEXT, MEDZERY... */
+
+.dropdown-content3 {
+    font-weight: 700;
+    font-size: 16px;
+    display: none;
+    position: absolute;
+    background-color: #e32626;
+    max-width: 650px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    right: 326px;
+
+}
+
+
+.dropdown3:hover .dropdown-content3 {
+    display: block;
+    position: absolute;
+    
+}
+
+/* ORANGE SECTION */
+/* Counseling and Guidance CONTAINER - TO CO SA TI OTVORI KED NA TO PREJDES MYSOU - TO AKO TO JE ZORADENE - GRID!!! */
+
+.dropdown-container4 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 50px;
+    grid-auto-flow: column;
+    width: 100%;
+    height: auto;
+    align-content: center;
+    font-weight: 700;
+    text-align: left;
+    align-items: flex-start !important;
+}
+
+/* Counseling and Guidance BUTTON - Oranzovy */
+
+.dropbtn4 {
+    border: none;
+    background: transparent;
+    color: #f2994d;
+    font-weight: 550;
+    padding-bottom: 20px;
+    display: block;
+    font-size: 20px;
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+	font-family:quicksand;
+}
+
+
+
+ .dropdown4:hover .dropbtn4 {
+    color: #f2994d !important;
+    background: transparent;
+}
+
+/* Counseling CONTAINER - TO CO SA TI OTVORI KED NA TO PREJDES MYSOU - FARBA, TEXT, MEDZERY... */
+.dropdown-content4 {
+    font-weight: 700;
+    font-size: 18px;
+    display: none;
+    position: absolute;
+    background-color: #f2994d;
+    max-width: 650px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-top: 25px;
+    padding-right: 25px;
+    /* [disabled]padding-left: 25px; */
+    padding-bottom: 25px;
+    right: 326px;
+
+}
+
+
+.dropdown4:hover .dropdown-content4 {
+    display: block;
+}
+
+/* SPECIFICKA POZICIA DANEJ POLOZKY V GRIDE (V TABULKE) - VZTAHUJE SA NA ORANZOVU SEKCIU, PRVA POLOZOKA - TEN DLHY TEXT */
+
+.item-a {
+    justify-self: start;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    margin-left: 0px;
+}
+
+
+.bar {
+    padding-top: 33px;
+    padding-bottom: 0px;
+}
+
+
+
+/* LINKY V MENU */
+
+.sub-button-menu {
+    cursor: pointer;
+    font-weight: 550;
+    color: white !important;
+    border: none;
+    background: none;
+    font-size: 18px;
+    margin-left: 20px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+	font-family:quicksand;
+}
+
+.sub-button-menu:hover {letter-spacing: 0.3px}
+
+/* PODLINKY V MENU - SUB LINKS */
+
+.insidelinko {
+    text-align: left;
+    color: white !important;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: 35px;
+    margin-bottom: 15px;
+    font-weight: 500 !important;
+    float: left;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    clear: both;
+    width: 100%;
+font-family:quicksand;}
+
+/* KONKRETIZOVANE SUBLINKY V MENU */
+
+.insidelinko a { text-align: left;
+    color: white !important;
+    cursor: pointer;
+    margin-right: auto;
+    
+   margin-left: 55px;
+    font-weight: 500 !important;
+    float: left;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    clear: both;
+    width: 100%;
+font-family:quicksand;}
+
+.insidelinko a:hover {font-weight: 700;}
+
+/* SUBLINKY SUBLINKOV - IKEA, GRAPHIC WORKSHOP */
+
+.pod-insidelinko {
+    cursor: pointer;
+    text-align: left;
+    color: white !important;
+    font-weight: 500 !important;
+    float: left;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    justify-content: center;
+    clear: both;
+	font-family:quicksand;
+
+}
+
+.pod-insidelinko a {cursor: pointer;
+    text-align: left;
+    color: white !important;
+    font-weight: 500 !important;
+    margin: auto auto 15px 10px;
+    float: left;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    justify-content: center;
+    position: relative;
+    clear: both;
+    padding-bottom: 5px;
+    padding-left: 50px;
+	font-family:quicksand;}
+
+.insidelinko:hover, .pod-insidelinko:hover {
+    color: black;
+    font-weight: 700 !important;
+    background: none;
+   }
+
+
+.pod-insidelinko a:hover, .insidelinko a:hover {font-weight: 700!important}
+
+
+/* SIPKY V MENU A V MENU BARE */
+
+.inside {
+    padding-left: 10px;
+    align-self: flex-start;}
+.outside {
+    padding-left: 20px;
+    clear: left;}
+
+
+/* BANNER */
+
+
+
+.mySlides {display: none;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1250px;
+    /* [disabled]height: 600px; */
+    position: relative;
+    margin: auto;
+    max-height: 600px;
+}
+
+/* Caption text */
+
+/* Number text (1/3 etc) */
+
+/* The dots/bullets/indicators */
+.dotline {display: none;}
+
+.dot {
+    display: none;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  border: none;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* OBRAZKY V BANNER */
+
+.bannerimg {
+    max-height: 600px;
+    max-width: 1920px;
+    width: 100%;
+}
+
+
+/* LOGO */
+
+
+.logo {
+    display: block;
+    width: 180px;
+    margin-right: 80px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+}
+
+/* CIARA INSIDE TAB */
+
+.ciara-inside-tab {
+    width: 100%;
+    height: 1px;
+    background-color: #c7c8ca;
+    display: block;
+    margin-bottom: 35px;
+    margin-top: -10px;
+}
+
+
+/* CIARA TOP - LINE */
+
+.ciara {
+    width: 100%;
+    background-color: #547dbd;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    max-width: 1920px;
+}
+
+
+#zelenaciara {background-color: #66b330;
+border: none;}
+#oranzovaciara {background-color: #f2994d;border: none;
+}
+
+
+/* TABY */
+
+/* BUTTONY NALAVO V MENU */
+
+.basic-btn-in-tab{text-decoration: none;
+font-size: 18px;
+color: white !important;
+display: block;
+border: none;
+outline: none;
+background: none;
+padding-top: 10px;
+padding-bottom: inherit;
+padding-left: 30px;
+cursor: pointer;
+text-align: left;
+font-weight: 500 !important;
+font-family: quicksand;}
+
+/* BUTTONY NALAVO V MENU - SPECIFIKOVANE*/
+
+.basic-btn-in-tab a {text-decoration: none;
+font-size: 18px;
+color: white !important;
+display: block;
+border: none;
+outline: none;
+background: none;
+cursor: pointer;
+text-align: left;}
+
+/* BUTTONY NALAVO V MENU - TIE KTORE SA OTVARAJU - MAJU POD SEBOU SUBBUTTONY*/
+
+.dropdown-btn {
+    text-decoration: none;
+    font-size: 18px;
+    color: white!important;
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    list-style-type: none;
+    clear: none;
+    width: 100%;
+    text-align: left;
+	font-weight: 500 !important;
+}
+
+/* Optional: Style the caret down icon */
+/* SIPKA VEDLA OTVARACICH BUTTONOV */
+.fa-caret-down {
+    float: right;
+    padding-right: 25px;
+
+}
+
+.fa-caret-down.sipkapodsublinkom {display: inline-block;
+padding: 0 !important;
+position: absolute;
+margin-left: 40px;}
+
+.dropdown-container-inside {
+  display: block;
+  background-color: transparent;
+  padding-left: 8px;
+}
+
+/* SUBUTTONY NALAVO - POD OTVARACIMI BUTTONMI */
+.vtom {
+    font-size: 18px;
+    color: white!important;
+    display: block !important;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    font-weight: 400 !important;
+    list-style-type: none;
+    clear: none;
+    text-decoration: none;
+    text-align: left
+}
+
+/* SUB BUTTONY SUBBUTTONOV - POD POD*/
+
+.pod-vtom {font-size: 16px;
+    color: white!important;
+    display: block !important;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    font-weight: 400 !important;
+    list-style-type: none;
+    clear: none;
+    text-decoration: none;
+    text-align: left}
+
+
+
+.button-inside-tabmenu {
+    background: none;
+    border: 0;
+    width: 100%;
+}
+
+/* RIGHT SIDE - ARTICLE */
+/* CLANOK - TO ZE JE NAPRAVO. FARNA, PISMO ATD*/
+
+.heading {
+    margin-top: 50px;
+    margin-bottom: 35px;
+    color: #547dbd;
+    text-align: center;
+	font-size: 24px;
+}
+
+.green-heading {color: #66b330 !important; }
+
+.red-heading {color: #e32626;}
+.referal {color: #e32626 !important;
+font-weight: 600 !important;
+cursor: pointer;}
+
+.orange-heading {color: #f2994d !important;}
+
+.download-article {color: #547dbd !important;
+font-weight: 600 !important;}
+
+.paragraph-inside {
+    font-size: 16px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+.heading-inside {
+    text-align: left;
+    font-size: 18px;
+	margin-bottom: 10px;
+}
+
+
+
+
+.tab {
+    float: left;
+    /* border: 1px solid #ccc; */
+    height: auto;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #547dbd;
+    margin-top: -2px;
+    width: 360px;
+    margin-bottom: 274px;
+}
+
+/* FARBA TABOV */
+
+#tab-zeleny {background-color: #66b330}
+
+#tab-oranzovy{background-color: #f2994d;}
+/* Style the buttons inside the tab - PREDTYM WHITE TEXT*/
+
+
+.dropdown-container-inside {
+    display: none;
+    background-color: transparent;
+
+}
+
+/* PREDTYM WHITE TEXT*/
+
+
+/* Change background color of buttons on hover */
+.dropdown-btn:hover,.itemtexto:hover, .vtom:hover, .pod-vtom:hover {
+ /* background-color: #06338F; */
+    width:100%;
+    font-weight: 700 !important;
+    margin-right: 15px;
+}
+
+.basic-btn-in-tab:hover {font-weight: 700 !important;}
+
+
+/* Create an active/current "tab button" class */
+.dropdown-btn:active,.itemtexto:active, .vtom:active .pod-vtom:active {
+    background-color: inherit;
+    font-weight: 700 !important;
+    width: 100%;
+}
+
+
+/* Style the tab content */
+
+/* CELE LAVE MENU - VEDLA CLANKOV, VYSKA, SIRKA, FARBA...*/
+
+.tabcontent {
+    float: left;
+    padding-right: 50px;
+    padding-left: 50px;
+    border-left: none;
+    height: 100%;
+    max-width: 810px;
+    min-width: 330px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+ .tabis-section {
+    width: auto;
+    margin: 0px auto 154px;
+    display: inherit;
+    max-width: 1250px;
+    padding-bottom: 59px;
+    min-height: 60vh;
+}
+
+/* ABOUT SECTION - HOMEPAGE */
+
+.about-section-homepage {
+    width: auto;
+    margin: -20px 0px 30px;
+    padding-top: 1px;
+    /* [disabled]padding-right: 450px; */
+    /* [disabled]padding-left: 450px; */
+    padding-bottom: 40px;
+    background-size: 190px auto;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-image: url(gulickz-right.png);
+    background-position: 96% 75%;
+    /*
+    display: block;
+    box-shadow: 0 3px,0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 3px,0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+.about-nadpis-homepage {
+    font-size: 36px;
+    margin: 50px 0px 65px 0px;
+    text-align: center;
+	font-weight: 700 !important;
+}
+
+.about-text-homepage {
+    font-size: 18px;
+    text-align: left;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* REVIEWS */
+
+/* divider - reviews container */
+
+.review-ciara {width: 800px;
+    background-color: #c7c8ca;
+    height: 1px;
+    padding: 0;
+	margin: auto;
+    display: block;}
+
+
+
+/* SLIDESHOW REVIEWS */
+
+.myReviews {display: none;}
+
+/* Slideshow container */
+.slideshow-container-reviews {
+    border: 2px;
+    max-width: 1000px;
+    position: relative;
+    display: block;
+    /* [disabled]margin-top: 71px; */
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0px;
+    text-align: center;
+    border-radius: 0px;
+    /* [disabled]border-color: #000000; */
+    /* [disabled]border-style: solid; */
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    /*
+    box-shadow: 0px 4px 8px 9px rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0px 4px 8px 9px rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+/* Caption text */
+.text {
+    color: black;
+    font-size: 18px;
+    padding-top: 8px;
+    /* [disabled]padding-right: 450px; */
+    /* [disabled]padding-left: 450px; */
+    padding-bottom: 8px;
+    position: absolute;
+    width: 750px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0pt;
+    right: 0pt;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color:#547dbd;
+  font-size: 16px;
+  text-align: center;
+  align-self: flex-end;
+}
+
+/* The dots/bullets/indicators */
+.doty {
+    height: 15px;
+    width: 15px;
+    margin: 0px 2px auto;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    align-self: flex-end;
+}
+.positiondotky {
+    position: inherit;
+    margin-top: 53px;
+}
+
+/* BODKY - ICH FARBA KED JE TO AKTIVNE */
+.activo {
+    background-color: #547dbd;
+    margin-top: 125px;
+}
+
+
+/* Fading animation */
+/* animacia */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/* animacia */
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* animacia */
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* DIVIDER - CIARA ROZDELUJUCA CLANKY NA HOMEPAGE*/
+
+.divider {
+    width: 1250px;
+    background-color: #c7c8ca;
+    height: 1px;
+    padding: 0;
+    margin: auto auto -35px;
+    display: block;
+}
+
+
+/* ZIG ZAG LAYOUT - ARTICLES - NA STRIEDACKU CLANKY, JEDEN VLAVO DRUHY VPRAVO ATD... */
+
+.articles-heading-HP {
+    font-size: 36px;
+    text-align: center;
+	font-weight: 700 !important;
+	margin-bottom: 65px;
+}
+
+.articles-on-HP {font-size: 18px;
+}
+
+.zigzag-container {
+    padding: 64px;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.riadok:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* SIRKA DANYCH RIADKOV V KTORYCH JE TEXT + OBRAZOK 66% + 33 % */
+.column-66 {
+	align-items: center;
+    float: left;
+    width: 66.66666%;
+    padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.nadpis-v-articli {
+    font-size: 24px;
+	margin-bottom: 30px;
+}
+
+/* BUTTON POD CLANKAMI NA HOMEPAGE */
+.readmore {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #547dbd;
+	font-weight: 550 !important;
+	margin-top: 15px;
+	font-family: quicksand;
+}
+
+.readmore a {color: white !important;}
+
+/* OBRAZOK VEDLA ARTIKLOV */
+.img-article-HP {
+	max-width: 335px;
+	min-height: 150px;
+  display: block;
+  height: auto;
+  
+}
+
+
+
+
+
+.info-subs {color: white;
+padding-top: 20px;
+max-width: 350px;
+text-align: left;
+padding-left: 5px;
+padding-right: 5px;}
+
+
+/* SPODOK - FOOTER*/
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: auto;
+    grid-column-gap: 25px;
+    background-color: #939598;
+    padding: 80px 350px 40px;
+    width: 100%;
+	margin-top: 80px;
+}
+
+li {text-decoration: none;}
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+			text-decoration: none;
+        }
+
+
+/*END FOOTER SOCIAL DESIGN*/
+.single_footer{}
+/*
+@media only screen and (max-width:768px) {
+.single_footer{margin-bottom:30px;}
+}*/
+
+.single_footer h4 {
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.single_footer h4::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 40px;
+    background: #fff;
+    margin-top: 20px;
+}
+a {color: black !important;
+text-decoration: none !important}
+
+.single_footer p{
+	color:#fff;
+	text-decoration: none;
+	outline: none;
+}
+.single_footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.single_footer ul li{}
+.single_footer ul li a {
+    color: #fff !important;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    line-height: 36px;
+    font-size: 16px;
+    
+}
+
+.single_footer ul li a:hover { color: #ff3666; }
+
+.single_footer_address{}
+.single_footer_address ul{text-decoration: none}
+.single_footer_address ul li{color:#fff;}
+.single_footer_address ul li span {
+    font-weight: 400 !important;
+    color: #fff;
+    line-height: 28px;
+}
+
+.contact_social ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+/*START NEWSLETTER CSS*/
+
+.subscribe {
+    display: block;
+    position: relative;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.subscribe__input {
+    background-color: #fff;
+    border: medium none;
+    border-radius: 5px;
+    color: #333;
+    display: block;
+    font-size: 15px;
+    font-weight: 500 !important;
+    height: 60px;
+    letter-spacing: 0.4px;
+    margin: 0;
+    padding: 0 150px 0 20px;
+    text-align: center;
+    text-transform: capitalize;
+    /* [disabled]width: 100%; */
+}
+
+/* TLACITKO SUBSRIBE*/
+.subscribe__btn {
+background-color: transparent;
+border-radius: 0;
+color: black;
+cursor: pointer;
+display: block;
+font-size: 20px;
+height: 60px;
+position: absolute;
+right: 0;
+top: 0;
+width: 60px;
+	border: none;
+}
+.subscribe__btn i{transition: all 0.3s ease 0s;}
+
+
+
+/*END NEWSLETTER CSS*/
+
+
+
+/*START SOCIAL PROFILE CSS*/
+.social_profile {margin-top:40px;}
+.social_profile ul{
+list-style: outside none none;
+margin: 0;
+padding: 0;
+}
+.social_profile ul li{float:left;}
+.social_profile ul li a {
+    text-align: center;
+    border: 0px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    margin: 0px 5px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social_profile ul li a:hover{
+background:#547dbd;
+color:#fff;
+border:0px;
+}
+
+
+
+/* RIGHT SIDE */
+
+.pozadie {
+    display: block;
+    width: 900px;
+}
+
+.contact-box {
+    margin: auto;
+    /* [disabled]padding-top: 10px; */
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.main-contact {
+    position: relative;
+    background-color: #547dbd;
+    padding: 30px;
+}
+
+.main-contact:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+
+.contact-body {
+
+	/*
+  display: flex;*/
+}
+
+.contact-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.contact-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    font-size: 26px;
+	font-weight: 700 !important;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: white;
+}
+
+.app-contact {
+    margin-top: 35px;
+    font-size: 18px;
+    color: white;
+	font-weight: 500 !important;
+	font-family: quicksand;
+}
+
+.info-box-contact {margin-bottom: 50px;}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+    margin-top: 40px;
+    height: 0px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #c7c8ca;
+    color: white;
+    font-size: 14px;
+    text-transform: none;
+    outline: none;
+    transition: border-color .2s;
+	font-family: quicksand;
+}
+
+placeholder {color: white !important;}
+
+.app-form-control::placeholder {
+  color: white;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 65px;
+    margin-right: 30px;
+	font-family: quicksand;
+	font-weight: 500 !important;
+	
+}
+
+.app-form-button:hover {
+  color: #000000;
+	font-weight: 700 !important;
+}
+
+
+
+
+/* LEFT SIDE */
+
+#screen {
+    position: absolute;
+    width: 360px;
+    /* [disabled]height: 39em; */
+    max-width: 100%;
+  overflow-x: visible;
+    opacity: 1;
+}
+
+.input-left {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    padding-left: 25px;
+    border-bottom: thick solid #000000;
+}
+
+#background {
+background-color: orange;
+  -webkit-filter: blur(3px);
+}
+
+label {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.line-in-contact {
+    position: relative;
+    float: left;
+    background-color: #547dbd;
+    width: 100%;
+    height: 95px;
+    /* [disabled]padding-top: 1px; */
+    padding-right: 0;
+    /* [disabled]padding-bottom: 61px; */
+    z-index: 3;
+    overflow: hidden;
+    -webkit-transition: background-color .7s;
+    border-bottom: 1px solid #c7c8ca;
+    padding-left: 25px;
+}
+
+.portrait {
+    position: relative;
+    float: left;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    margin-top: 32px;
+    margin-right: 14.5px;
+    margin-left: 1.5px;
+    /* [disabled]margin-bottom: 1.5px; */
+    background-size: cover;
+}
+.portrait:after {
+  content: ' ';
+  position: absolute;
+  top: -.3em;
+  left: -.3em;
+
+  height: 3.5em;
+  width: 3.5em;
+
+  border: 1px solid rgba(255,255,255, .5);
+  border-radius: 50%;
+  -webkit-transition: border .3s;
+}
+
+.details {
+    position: relative;
+    float: left;
+    top: 0;
+    width: 75%;
+    margin-top: 20px;
+    margin-right: 0;
+    margin-left: .75em;
+    /* [disabled]margin-bottom: auto; */
+    -webkit-transition: top .5s;
+}
+
+.name,
+.description {
+    /* [disabled]position: static; */
+    float: left;
+    clear: left;
+    margin: 0;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500 !important;
+    color: white;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    clear: left;
+    float: left;
+}
+.description {
+    clear: left;
+    float: left;
+    font-size: 13px;
+    color: rgba(255,255,255, .8);
+}
+
+.actions {
+    color: white;
+    position: absolute;
+    top: 100px;
+    /* [disabled]width: 125%; */
+    bottom: 0pt;
+    font-size: 14px;
+
+}
+.actions > div {
+
+  font-size: 2.1em;
+
+  position: absolute;
+  width: 25%;
+
+  color :transparent;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #fff;
+
+  cursor: pointer;
+}
+.actions > div:nth-child(2) {
+  left: 30%;
+}
+.actions > div:nth-child(3) {
+  left: 60%;
+}
+.actions > div:nth-child(4) {
+  left: 90%;
+}
+
+.actions > div:hover {
+  -webkit-text-stroke-width: 0;
+  color: #fff !important;
+}
+
+.info {
+  font-size: 100% !important;
+}
+.info:after {
+  font-size: 1.7em;
+  content: 'i';
+
+
+  color: #fff;
+  -webkit-text-stroke-width: 0;
+
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 2px 11px;
+}
+.info:hover:after {
+  background-color: rgba(255,255,255, .2);
+}
+
+/* Genreal Interaction */
+.line-in-contact:hover > .portrait #c7c8caer: 1px solid rgba(116,226,21, 1);
+  box-shadow: 0 0 3px rgba(116,226,21,.5);
+}
+
+input:checked + .line-in-contact {
+  background-color: rgba(0,0,0,.3); /**/
+  padding-top: 0px;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(0,0,0,.5);
+}
+
+input:checked + .line-in-contact > .details {
+  top: -6em;
+  z-index: 2;
+}
+
+
+/* CONTACT GRID */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 360px auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "Left-side Right-side";
+    max-width: 1250px;
+    margin: auto auto 70px;
+}
+
+.Left-side { grid-area: Left-side; }
+
+.Right-side { grid-area: Right-side; }
+
+
+
+/* ICONS - INSIDE CONTACT */
+
+.fa-at, .fa-map-marker, .fa-phone, .fa-envelope {margin-right: 20px;}
+
+
+/* TEST */
+.contact-grid {
+    width: 1250px;
+    display: grid;
+  grid-template-columns: 360px auto;
+  grid-template-rows: 1fr;
+	margin: auto;
+	grid-column-gap: 50px;
+}
+
+
+/* PORTRAIT */
+
+.heading-in-contact-tab {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+	margin-bottom: 20px;
+    font-weight: 700 !important;
+}
+
+
+
+.portretik {
+    float: left;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+    margin-right: 25px;
+    margin-top: 12px;
+}
+
+.vtom-contact {
+    font-size: 18px;
+    color: white!important;
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 500 !important;
+    clear: none;
+    text-decoration: none;
+    text-align: left;
+    margin-left: 60px;
+	font-family: quicksand;
+
+}
+
+.dropdown-container-inside-contact {
+   
+    padding-bottom: 10px;
+}
+
+.textik-v-contactbar {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 500 !important;
+	font-family: quicksand;
+}
+
+.dropdown-btn-contact {
+    text-decoration: none;
+    font-size: 16px;
+    color: white!important;
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    clear: none;
+    width: 100%;
+    text-align: left;
+    border-bottom: solid 1px #c7c8ca;
+
+}
+
+a.vtom.active {display: block;}
+
+.dropdown-container-inside-contact {display: none;}
+
+.sipka-contact {
+    float: right;
+    margin-top: 3px;
+
+}
+
+.where-works {
+    font-size: 16px;
+    text-align: left;
+    margin-top: 7px;
+    font-weight: 400 !important;
+	font-family: quicksand;
+}
+
+
+.contacto-section {
+    width: 1250px;
+    margin: auto auto 141px;
+}
+
+.tab-contact {
+    float: left;
+	display: block;
+    height: 100%;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #547dbd;
+    margin-top: -2px;
+    width: 360px;
+    margin-bottom: 50px;
+	font-family: quicksand;
+}
+
+.ciara-contact {
+    width: 100%;
+    background-color: #547dbd;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    max-width: 1920px;
+}
+
+
+/* TABLET*/
+
+@media screen and (max-width: 768px) {
+	
+	.info-subs {font-size: 14px;}
+	
+	.applynow-dots1 {background-image: none!important; }
+	
+	.row {display: none;}
+	
+	.bar {display: none;}
+	
+	.menucko {display: none;}
+	
+	.slideshow-container {margin-top: 80px;}
+	
+	.about-section-homepage {background: transparent;}
+	
+	.about-text-homepage 
+				{margin: auto 30px auto 30px;
+					width: auto;
+					max-width: 650px;
+					min-width: 440px;
+				font-size: 16px;}
+	
+	.bodkybackground {background: transparent;}
+	
+	.about-nadpis-homepage {font-size: 28px;}
+	
+	.slideshow-container-reviews {max-width: 650px;}
+	
+	.text 
+	{margin: auto 30px auto 30px;
+					width: auto;
+					max-width: 650px;
+					min-width: 440px;
+				font-size: 16px;}
+	
+	.column-66 {width: auto;}
+	
+	.zigzag-container {padding: 25px;}
+	
+	.readmore {position: relative;
+	left: 33%;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	font-size: 18px;}
+	
+	.img-article-HP {width: auto;
+		margin: auto;
+	display: block;}
+	
+	.sib-hide {display: none;}
+	
+	.footer {padding: 30px;}
+	
+	.single_footer h4 {font-size: 15px;}
+	
+	.single_footer ul li a {font-size: 14px;}
+	
+	.subscribe__input {padding: 0px;}
+	
+	.column-33 
+	{float: none;
+	width: inherit;}
+	
+	.divid-hide {display: none}
+	
+	.divider {margin: auto 30px auto 30px;
+					width: auto;
+					max-width: 650px;
+					min-width: 440px;
+				font-size: 16px;}
+	
+	.review-ciara {margin: auto 30px auto 30px;
+					width: auto;
+					max-width: 650px;
+					min-width: 440px;
+				font-size: 16px;}
+	
+	input.subscribe__input {font-size: 10px !important;
+	text-align: left;
+	width: inherit;
+	padding-left: 25px;}
+	
+	.articles-heading-HP {font-size: 24px;}
+	
+	.nadpis-v-articli {font-size: 18px;
+	margin-bottom: 30px;}
+	
+	.articles-on-HP {font-size: 16px;}
+	
+	.activo {margin-top: 135px;}
+	
+	.bodkybackground {background: transparent;}
+	/* TABY*/
+	.ciara {margin-top: 80px;
+	border: none;}
+	.tab {margin-bottom: auto;
+	width: auto;
+	float: none;}
+	.tabcontent {background: white;
+	padding-bottom: 60px;}
+	
+	.tab-contact {width: 100%;
+}
+
+.contacto-section {max-width: 440px;}
+
+.main-contact {max-width: 440px;
+padding: 20px;}
+
+	#kont.tabcontent {padding: 0;
+	display: block;
+	margin: auto auto 70px auto;}
+
+	
+	
+	
+}
+
+/* TELEFON */ /* RYTMUS, NEMAS VOLAKY TELEFON POZICAT?*/
+
+@media screen and (max-width: 500px) {
+	
+	.apply-inside-article {font-size: 14px;
+	max-width: 250px;
+	min-width: }
+	
+	/* HOMEPAGE MEDIA QUERRY */
+	.row {display: none;}
+	
+	.bar {display: none;}
+	
+	.menucko {display: none;}
+	
+	.slideshow-container {margin-top: 80px;}
+	
+	.about-section-homepage {background: transparent;}
+	
+	.about-text-homepage 
+				{max-width: 440px;
+				font-size: 15px;}
+	
+	.bodkybackground {background: transparent;}
+	
+	.about-nadpis-homepage {font-size: 24px;}
+	
+	.slideshow-container-reviews {max-width: 440px;}
+	
+	.text 
+	{max-width: 440px;
+	font-size: 15px;
+	margin: 0px;}
+	
+	.column-66 {width: auto;}
+	
+	.zigzag-container {padding: 25px;}
+	
+	.readmore {position: relative;
+	left: 33%;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	font-size: 18px;}
+	
+	.img-article-HP {width: 440px;
+		margin: auto;
+	display: block;}
+	
+	.sib-hide {display: none;}
+	
+	.footer {padding: 30px;}
+	
+	.single_footer h4 {font-size: 14px;}
+	
+	.single_footer ul li a {font-size: 13px;}
+	
+	.subscribe__input {padding: 0px;}
+	
+	.info-subs {font-size: 13px;}
+	
+	.column-33 
+	{float: none;
+	width: inherit;}
+	
+	.divid-hide {display: none}
+	
+	.divider {max-width: 440px;
+	margin: auto;}
+	
+	.review-ciara {max-width: 440px;
+	margin: auto;}
+	
+	input.subscribe__input {font-size: 10px !important;
+	text-align: left;
+	width: inherit;
+	padding-left: 25px;}
+	
+	.articles-heading-HP {font-size: 24px;}
+	
+	.nadpis-v-articli {font-size: 18px;
+	margin-bottom: 30px;}
+	
+	.articles-on-HP {font-size: 15px;}
+	
+	.activo {margin-top: 135px;}
+	
+	/* APPLY NOW MEDIA QUERRY*/
+	
+	#oranzovaciara {margin-top: 80px;
+	width: 100%;}
+	.tabcontent {display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	background: white;}
+	.orange-heading {
+}
+	
+	
+	
+	/* Contact */
+	
+	.tab-contact {width: 100%;
+}
+
+.contacto-section {max-width: 750px;}
+
+.main-contact {max-width: 750px;
+padding: 20px;}
+
+	#kont.tabcontent {padding: 0;
+	display: block;
+	margin: auto auto 70px auto;}
+
+	/* EDUCATION */
+	
+	
+	.ciara {margin-top: 80px;
+	width: 100%;
+		border: none;
+	}
+	body {background-color: white !important}
+	.tab {margin-bottom: 0px;
+	width: 100%;}
+	
+	/* Contact */
+
+
+.tab-contact {width: 100%;
+}
+
+.contacto-section {max-width: 440px;}
+
+.main-contact {max-width: 440px;
+padding: 20px;}
+
+	#kont.tabcontent {padding: 0;
+	display: block;
+	margin: auto auto 70px auto;}
+
+}
+	
+
+	
+	
+
+
+
